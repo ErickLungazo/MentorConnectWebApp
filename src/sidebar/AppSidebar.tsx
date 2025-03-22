@@ -18,8 +18,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const menuItems: SidebarItem[] = sidebarMenu[role] || sidebarMenu["guest"];
 
   return (
-    <Sidebar {...props}>
-      <SidebarHeader>
+    <Sidebar {...props} className={"bg-white"}>
+      <SidebarHeader className={"bg-white"}>
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton
@@ -39,7 +39,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         </SidebarMenu>
       </SidebarHeader>
 
-      <SidebarContent className={"border p-5"}>
+      <SidebarContent className={"border p-5 bg-white"}>
         <SidebarMenu className={"flex flex-col gap-3"}>
           {menuItems.map(({ title, url, icon: Icon }) => (
             <SidebarMenuItem key={title}>

@@ -24,7 +24,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
   const { headerTitle } = useHeaderStore(); // Retrieve header title from Zustand store
 
   return (
-    <SidebarProvider>
+    <SidebarProvider className={""}>
       <AppSidebar />
       <SidebarInset>
         <header className="flex sticky top-0 left-0 right-0 h-16 bg-white z-50 shrink-0 items-center gap-2 border-b px-4">
